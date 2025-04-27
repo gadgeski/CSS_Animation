@@ -42,7 +42,7 @@ body {
   transition-delay: 0.5s;
 }
 .box:hover:before,
-.box:hover::aftetr {
+.box:hover::after {
   width: 100%;
   height: 100%;
   border-color: rgba(255, 255, 255, 0.3);
