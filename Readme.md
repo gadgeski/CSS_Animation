@@ -4,18 +4,26 @@
 このHTMLファイルは、ウェブページの基本的な構造を定義しています。
 <h3><head>タグ:</h3>
    * charset="UTF-8": 文字エンコーディングをUTF-8に設定し、様々な言語の文字を正しく表示できるようにします。
+   
    * http-equiv="X-UA-Compatible" content="IE=edge": Internet Explorerの最新のレンダリングモードを使用するように指示します。
+   
    * name="viewport" content="width=device-width, initial-scale=1": レスポンシブデザインのための設定で、デバイスの幅に合わせてビューポートの幅を調整し、初期ズームレベルを1に設定します。
+   
    * <title>-Mouse Hover Animation-</title>: ブラウザのタブやウィンドウに表示されるページのタイトルです。
+   
    * <link rel="stylesheet" href="style.css" />: style.cssという外部CSSファイルを読み込み、ページのスタイルを適用します。
+   
    * <script src="script.js" defer></script>: script.jsという外部JavaScriptファイルを読み込みます。defer属性により、HTMLの解析が完了した後にスクリプトが実行されるため、ページの読み込みがブロックされません。
  
 <h3><body>タグ:</h3>
    * <header id="header">：ページのヘッダー部分です。
+     
      * <button id="menu-open" class="btn-menu">Menu</button>: メニューを開くためのボタンです。ID menu-open とクラス btn-menu が付与されています。
+     
      * <div class="menu-container">: メニューのコンテンツを保持するコンテナです。初期状態では非表示になっています。
 
        * <button id="menu-close" class="btn-menu">Close</button>: メニューを閉じるためのボタンです。ID menu-close とクラス btn-menu が付与されています。
+
        * <ul class="menu">: メニュー項目をリスト形式で表示します。
          * <li><a href="#">PRODUCTS</a></li>
          * <li><a href="#">INFORMATION</a></li>
@@ -29,15 +37,22 @@
  
 <h3>body:</h3>
    * width: 100%; height: 100vh;: ボディ要素をビューポートの幅いっぱいに広げ、高さもビューポートの高さに合わせます。
+   
    * background: url(img/IMG_042441.png) no-repeat;: img/IMG_042441.pngという画像を背景に設定し、繰り返さないようにします。
+   
    * background-size: cover;: 背景画像を要素全体を覆うように拡大・縮小します。
  
  <h3>.box:</h3>
    * width: 720px; height: 480px;: ボックスの固定サイズを設定します。
+   
    * margin: 13% auto 0;: 上部に13%のマージンを取り、左右は自動で中央に配置します。
+   
    * display: flex; align-items: center; justify-content: center;: フレックスボックスを使い、子要素（「Border Animation」テキスト）を垂直方向・水平方向に中央揃えにします。
+   
    * color: #fff; font-size: 32px; font-weight: bold;: テキストの色、サイズ、太さを設定します。
+   
    * position: relative;: 疑似要素（::beforeと::after）を配置するための基準点を設定します。
+   
    * transition: 0.4s;: box要素自体のプロパティ（例: background）が変更された際に、0.4秒かけて滑らかに変化するように設定します。
 
 - .box::before、.box::after:
@@ -71,6 +86,7 @@
 <h1>JavaScript (script.js)</h1>
 このJavaScriptファイルは、ナビゲーションメニューの開閉機能を提供します。
  * document.addEventListener("DOMContentLoaded", function () { ... });:
+   
    * HTMLドキュメントが完全に読み込まれて解析された後に、指定された関数を実行します。これにより、スクリプトがHTML要素にアクセスできるようになる前に実行されるのを防ぎます。
  
 <h3>要素の取得:</h3>
@@ -95,5 +111,8 @@
    * else { console.error("メニュー関連の要素が不明。ID及びclass名を確認してください。"); }: 上記の要素のいずれかが取得できなかった場合に、コンソールにエラーメッセージを出力します。これはデバッグに役立ちます。
 
 <h1>【まとめ】</h1>
-このコードは、シンプルなホバーアニメーションを持つボックスと、JavaScriptで開閉するナビゲーションメニューを持つウェブページを作成します。CSSの疑似要素とトランジションを巧みに利用して、視覚的に魅力的なホバーエフェクトを実現しています。
-また、JavaScriptを使用して、クリックイベントに基づいてメニューの表示/非表示を切り替えています。
+このコードは、シンプルなホバーアニメーションを持つボックスと、JavaScriptで開閉するナビゲーションメニューを持つウェブページを作成します。
+
+CSS の疑似要素とトランジションを巧みに利用して、視覚的に魅力的なホバーエフェクトを実現しています。
+
+また、JavaScript を使用して、クリックイベントに基づいてメニューの表示/非表示を切り替えています。
